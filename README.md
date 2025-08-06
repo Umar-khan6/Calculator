@@ -29,7 +29,7 @@ A modern glassmorphic calculator built with HTML, CSS, and JavaScript, featuring
 
 | Light Mode                                    | Dark Mode                                   |
 | --------------------------------------------- | ------------------------------------------- |
-| ![Light Mode](screenshots/light-mode.png.png) | ![Dark Mode](screenshots/dark-mode.png.png) |
+| ![Light Mode](screenshots/light-mode.png) | ![Dark Mode](screenshots/dark-mode.png) |
 
 ---
 
@@ -68,3 +68,4 @@ Feel free to connect with me:
 - **LinkedIn:** [umarkhan24](https://linkedin.com/in/umarkhan42)
 - **GitHub:** [Umar-khan6](https://github.com/Umar-khan6)
 - **Email:** umarkhan655020@gmail.com
+
