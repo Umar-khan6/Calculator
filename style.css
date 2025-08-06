@@ -1,0 +1,208 @@
+/* ===== Reset Default Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== Body ===== */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #023047 0%, #41b3c1 100%);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ===== Calculator Container ===== */
+.container {
+  width: 300px;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  animation: fadeIn 0.8s ease-in-out;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ===== Display Input ===== */
+.display {
+  width: 100%;
+  height: 60px;
+  font-size: 2rem;
+  text-align: right;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ===== Buttons Grid ===== */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* ===== Buttons Style ===== */
+button {
+  padding: 15px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Operator Buttons ===== */
+.operator {
+  background: rgba(255, 255, 255, 0.3);
+  color: #33415c;
+}
+
+.operator:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* ===== Footer Fixed at Bottom Center ===== */
+footer {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  padding: 5px 12px;
+  border-radius: 8px;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer a {
+  color: #001233;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Fade-in Animation ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Toggle Button ===== */
+.theme-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 6px 12px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.3);
+  color: #000;
+  font-size: 18px;
+  transition: background 0.3s;
+}
+body.dark-mode .theme-btn {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+/* ===== Dark Mode Styles ===== */
+body.dark-mode {
+  background: linear-gradient(45deg, #0d1117 0%, #2b2f36 100%);
+}
+
+body.dark-mode .container {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .display {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+body.dark-mode button {
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+body.dark-mode .operator {
+  background: rgba(0, 0, 0, 0.4);
+  color: #ffcd3c;
+}
+
+body.dark-mode footer a {
+  color: #ffcd3c;
+  text-decoration: none;
+  font-weight: bold;
+}
+/* Calculator Heading */
+.calc-heading {
+  position: absolute;
+  top: 60px;
+  text-align: center;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: color 0.3s;
+  opacity: 0; /* Start hidden */
+  transform: translateY(-20px); /* Start slightly above */
+  animation: headingFadeIn 0.8s ease-out forwards;
+  animation-delay: 0.3s; /* Slight delay after page load */
+}
+
+body.dark-mode .calc-heading {
+  color: #ffcd3c; /* golden accent in dark mode */
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
+}
+
+/* Animation keyframes */
+@keyframes headingFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
